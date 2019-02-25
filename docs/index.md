@@ -8,7 +8,7 @@ Many real-world prediction tasks have outcome (a.k.a., target) variables that ha
 
 ## Algorithm
 
-![Branching]({{site.baseurl}}/assets/img/flowchart_Ltp.png)> 
+![Branching]({{site.baseurl}}/img/flowchart_LtP.png)> 
 
 ## Usage
 
