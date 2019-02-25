@@ -39,6 +39,5 @@ print("Prediction: %s" % predict)
 ```
 
 ## How to cite
-```
-Xindi  Wang, Onur Varol, and Tina Eliassi-Rad. L2P: Algorithm for estimating heavy-tailed outcomes. (_under_ _review_)
-```
+
+Xindi  Wang, Onur Varol, and Tina Eliassi-Rad. L2P: Algorithm for estimating heavy-tailed outcomes. (_under review_)
