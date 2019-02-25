@@ -8,106 +8,37 @@ Many real-world prediction tasks have outcome (a.k.a., target) variables that ha
 
 ## Algorithm
 
-![Branching]({{site.baseurl}}/img/flowchart_LtP.png)> 
+![Branching]({{site.baseurl}}/img/flowchart_LtP.png)
 
 ## Usage
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
+
+```python
+# Test code
+import numpy as np
+from LtP import *
+from sklearn.ensemble import RandomForestClassifier
+
+X_train = np.array([[0, 0, 1, 1, 1, 1, 1, 0, 1],
+                    [0, 0, 1, 0, 0, 1, 0, 1, 1],
+                    [0, 0, 1, 1, 0, 1, 1, 0, 0],
+                    [1, 1, 1, 1, 0, 1, 1, 0, 1],
+                    [0, 1, 1, 1, 1, 1, 1, 1, 1],
+                    [1, 1, 1, 0, 1, 1, 0, 0, 1],
+                    [1, 0, 1, 1, 0, 1, 1, 1, 1]])
+y_train = np.array([9, 56, 11, 4, 4, 6, 12])
+
+placing = LearningToPlace(method="voting", efficient=True, clf=RandomForestClassifier(
+    n_estimators=100, n_jobs=-1, random_state=0))
+placing.fit(X_train, y_train)
+
+X_test = np.array([0, 1, 0, 1, 1, 1, 0, 0, 1])
+predict = placing.predict(X_test)
+print("Prediction: %s" % predict)
 
 ```
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version")
-end
+## How to cite
 ```
-
-#### Header 4
-
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-
-##### Header 5
-
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
-
-###### Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
-
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://assets-cdn.github.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
+Xindi  Wang, Onur Varol, and Tina Eliassi-Rad. L2P: Algorithm for estimating heavy-tailed outcomes. (_under_ _review_)
 ```
