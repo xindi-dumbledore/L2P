@@ -2,38 +2,28 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+Learning to Place (L2P) is an algorithm designed to predict heavy-tail distributed outcomes. This methodology is currently under review.
 
-[Link to another page](./another-page.html).
+Many real-world prediction tasks have outcome (a.k.a., target) variables that have characteristic heavy-tail distributions. Examples include copies of books sold, auction prices of art pieces, and sales of movies in the box office. Accurate predictions for the "big and rare" instances (e.g., the best-sellers, the box-office hits, etc) is a hard task. Most existing approaches heavily under-predict such instances because they cannot deal effectively with heavy-tailed distributions. We introduce Learning to Place (L2P), which exploits the pairwise relationships between instances to learn from a proportionally higher number of rare instances. L2P consists of two phases. In Phase 1, L2P learns a pairwise preference classifier: is instance A > instance B?. In Phase 2, L2P learns to place an instance from the output of Phase 1. Based on its placement, the instance is then assigned a value for its outcome variable. Our experiments, on real-world and synthetic datasets, show that our L2P approach outperforms competing approaches and provides explainable outcomes.
 
-There should be whitespace between paragraphs.
+## Algorithm
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+![Branching]({{site.baseurl}}/assets/img/flowchart_Ltp.png)> 
 
-# Header 1
-
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
-
-## Header 2
-
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
-
-### Header 3
+## Usage
 
 ```js
 // Javascript code with syntax highlighting.
 var fun = function lang(l) {
   dateformat.i18n = require('./lang/' + l)
   return true;
-}
+
 ```
 
 ```ruby
 # Ruby code with syntax highlighting
 GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
+  s.add_dependency(gem, "= #{version")
 end
 ```
 
