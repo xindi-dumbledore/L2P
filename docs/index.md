@@ -42,4 +42,4 @@ print("Prediction: %s" % predict)
 
 Xindi  Wang, Onur Varol, and Tina Eliassi-Rad. L2P: Algorithm for estimating heavy-tailed outcomes. (_under review_)
 
-[Link to PDF](http://www.wangxindi.org/L2P/)
+[Link to PDF](http://www.wangxindi.org/L2P/assets/paper.pdf)
